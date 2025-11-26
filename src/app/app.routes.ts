@@ -1,14 +1,19 @@
 import { Routes } from '@angular/router';
+import { NurseFind } from './nurse-find/nurse-find';
+import { App } from './app';
+import path from 'path';
 
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () =>
-            import('./nurse-find/nurse-find').then(m => m.NurseFind)
-    },
+        component: App
+        },
+    // {
+    //     path: 'home',
+    //     component: App
+    //     },
     {
         path: 'nurse_find',
-        loadComponent: () =>
-            import('./nurse-find/nurse-find').then(m => m.NurseFind)
-    }
+        component: NurseFind
+    },
 ];
