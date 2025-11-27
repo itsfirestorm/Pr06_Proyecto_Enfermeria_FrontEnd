@@ -5,10 +5,6 @@ export const routes: Routes = [
         loadComponent:()=>
             import('./home/home').then(m=>m.Home)
     },
-    {path:'home',
-        loadComponent:()=>
-            import('./home/home').then(m=>m.Home)
-    },
     {path:'home/:user/:upasswd',
         loadComponent:()=>
             import('./home/home').then(m=>m.Home)

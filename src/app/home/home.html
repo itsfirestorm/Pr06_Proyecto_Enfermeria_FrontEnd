@@ -1,26 +1,25 @@
-<p>Page HOME CatClean</p>
-<h1>{{ titol }} </h1>
+<h1>{{ titol }} at Home of CleanCat!</h1>
 
 <div class="container-fluid">
-    <ul class="navbar-nav">
+    <ul class="nav justify-content-center"> <!--Para usar listados horizonteles la clase de bootstrap-->
         <li class="nav-item">
-            <a routerLink="/login/" a> LOGIN </a>
+            <a class="nav-link" routerLink="/login/"> Login </a> <!--Para usar en los links la clase de bootstrap-->
         </li>
         <li class="nav-item">
-            <a routerLink="/nurse-list/" a> List nurses </a>
+            <a class="nav-link" routerLink="/nurse-list/"> List nurses </a>
         </li>
         <li class="nav-item">
-            <a routerLink="/nurse-find/" a> Find nurses </a>
+            <a class="nav-link" routerLink="/nurse-find/"> Find nurses </a>
         </li>
     </ul>
 </div>
 
-<button type="button" class="btn btn-primary" (click)="showDayWeek()">Show day</button>
+
 <div class="card">
-    <img class="card-img-top" src="img/inici.jpg" alt="Title" />
+    <img class="card-img-top" src="img/nurses.jpg" alt="Title" />
     <div class="card-body">
         <h4 class="card-title">Show day of the week</h4>
-        <p class="card-text">Text</p>
+        <p class="card-text">Click in button</p>
 
         @if (showDay) {
             @switch (getNumDiaSetmana()) {
@@ -33,6 +32,7 @@
             }
         }
     </div>
+    <button type="button" class="btn btn-primary" (click)="showDayWeek()">Show day</button>
 </div>
 
 

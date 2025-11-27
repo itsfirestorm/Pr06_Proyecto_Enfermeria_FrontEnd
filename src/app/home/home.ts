@@ -19,7 +19,7 @@ export class Home implements OnInit{
   this._activRoute.paramMap.subscribe(params=>{
     this.user= params.get('user')||"";
     this.upasswd= params.get('upasswd')||"";
-    this.titol="Welcome "+this.user+"!";
+    this.titol="Welcome "+this.user;
 
     });
 
