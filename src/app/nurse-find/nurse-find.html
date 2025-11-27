@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+
+          <h2 class="mb-3">Find nurses by name</h2>
+
+          <img src="public/img/icon.jpg" class="result-img me-3" />
+
+          <!-- Link a Home -->
+          <br>
+          <a class="btn btn-primary w-100 mb-3" routerLink="/">Home</a>
+
+          <!-- Campo de búsqueda -->
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Write the name here" [(ngModel)]="username" />
+          </div>
+
+          <button type="button" class="btn btn-success w-100" (click)="onSearch()">
+            Buscar
+          </button>
+
+        </div>
+      </div>
+
+      <div class="search-results mt-4">
+        <!-- Ejemplo: tarjeta de resultado (cuando exista) -->
+        <!--
+        <div class="card mt-2">
+          <div class="card-body d-flex align-items-center">
+            <div>
+              <h5 class="mb-0">Nombre Usuario</h5>
+              <small class="text-muted">Detalles</small>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+</div>
