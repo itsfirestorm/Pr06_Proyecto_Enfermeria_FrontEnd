@@ -17,11 +17,11 @@ export const routes: Routes = [
     component: App
   },
   {
-    path: 'nurselist',
+    path: 'nurse-list',
     component: NurseList
   },
   {
-      path: 'nurse_find',
+      path: 'nurse-find',
       component: NurseFind
   },
 ];
