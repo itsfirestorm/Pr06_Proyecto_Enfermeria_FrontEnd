@@ -12,25 +12,35 @@ import { CommonModule } from '@angular/common';
 	styleUrls: ['./nurse-find.css']
 })
 export class NurseFind {
-	imageUrl = 'assets/img/nurseIcon.jpg';
+	// imageUrl = 'public/img/icon.jpg';
 	title = 'Nurse Find Component';
 
 	username: string = '';
-	searchResults: Array<{ name: string, img: string }> = [];
+	searchResults: Array<{ name: string }> = [];
 
 	onSearch() {
 		const name = this.username?.trim();
+		// el if que pide la actividad lo utilizo para verificar si existe una persona con ese nombre
 		if (!name) {
-			// limpiar o mostrar mensaje; por ahora salimos
 			this.searchResults = [];
 			return;
+			
 		}
+		const lowerName = name.toLowerCase();
 
-		// demo: si el nombre contiene 'ana' devolvemos un resultado ficticio
-		if (name.toLowerCase().includes('ana')) {
-			this.searchResults = [{ name: 'Ana Martínez', img: this.imageUrl }];
-		} else {
-			this.searchResults = []; // sin resultados
-		}
+		// Array de enfermeras demo (los datos que sirven de prueba)
+		const nurses = [
+			{ name: 'Ana Martínez'},
+			{ name: 'Ana López',  },
+			{ name: 'Ana Sofía Herrera',},
+
+			// otro nombre para contraste
+			{ name: 'María González',}
+		];
+
+		// Filtrar por coincidencia
+		this.searchResults = nurses.filter(n =>
+			n.name.toLowerCase().includes(lowerName)
+		);
 	}
 }
