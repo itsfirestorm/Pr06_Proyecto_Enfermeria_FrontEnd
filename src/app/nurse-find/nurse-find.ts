@@ -24,18 +24,18 @@ export class NurseFind {
 		if (!name) {
 			this.searchResults = [];
 			return;
-			
+
 		}
 		const lowerName = name.toLowerCase();
 
 		// Array de enfermeras demo (los datos que sirven de prueba)
 		const nurses = [
-			{ name: 'Ana Martínez'},
-			{ name: 'Ana López',  },
-			{ name: 'Ana Sofía Herrera',},
+			{ name: 'Ana Martínez' },
+			{ name: 'Ana López', },
+			{ name: 'Ana Sofía Herrera', },
 
 			// otro nombre para contraste
-			{ name: 'María González',}
+			{ name: 'María González', }
 		];
 
 		// Filtrar por coincidencia

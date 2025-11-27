@@ -13,8 +13,9 @@
 
 /* estilos para tarjeta de resultado de ejemplo */
 .result-img {
-  width: 64px;
-  height: 64px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  margin: 10px;
 }
