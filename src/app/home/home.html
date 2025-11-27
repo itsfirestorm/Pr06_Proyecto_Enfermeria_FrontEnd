@@ -1,0 +1,49 @@
+<h1>{{ titol }} at Home of CleanCat!</h1>
+<div>
+    <h2 class="mb-3">List of head nurses</h2>
+    <ul>
+    @for (nurse of headNurses | keyvalue; track $index) {
+        <li>
+            {{ $index + 1 }} - {{ nurse.value }}
+        </li>
+    } @empty {
+        <li>There aren't head nurse</li>
+    }
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <ul class="nav justify-content-center"> <!--To use horizontal listings, the Bootstrap class-->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/login/"> Login </a> <!--For use in the links of the Bootstrap class-->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/nurse-list/"> List nurses </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/nurse-find/"> Find nurses </a>
+        </li>
+    </ul>
+</div>
+
+<div class="card">
+    <img class="card-img-top" src="img/nurses.jpg" alt="Title" />
+    <div class="card-body">
+        <h4 class="card-title">Show day of the week</h4>
+        <p class="card-text">Click in button:</p>
+
+        @if (showDay) {
+            @switch (getNumDiaSetmana()) {
+                @case (1) { <p>Dilluns</p> }
+                @case (2) { <p>Dimarts</p> }
+                @case (3) { <p>Dimecres</p> }
+                @case (4) { <p>Dijous</p> }
+                @case (5) { <p>Dvendres</p> }
+                @default { <p>Es cap de setmana</p> }
+            }
+        }
+    </div>
+    <button type="button" class="btn btn-primary" (click)="showDayWeek()">Show day</button>
+</div>
+
+

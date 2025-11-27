@@ -1,0 +1,7 @@
+.card-img-top {
+    max-width: 600px; /*para ajustar ancho max de la imagen y no se vea tan grande*/
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

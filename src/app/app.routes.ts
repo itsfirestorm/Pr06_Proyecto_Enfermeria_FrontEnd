@@ -4,6 +4,14 @@ import { NurseFind } from './nurse-find/nurse-find';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  {path:'',
+      loadComponent:()=>
+          import('./home/home').then(m=>m.Home)
+  },
+  {path:'home/:user/:upasswd',
+      loadComponent:()=>
+          import('./home/home').then(m=>m.Home)
+  },
   {
     path: '',
     component: App
@@ -12,12 +20,8 @@ export const routes: Routes = [
     path: 'nurselist',
     component: NurseList
   },
-    // {
-    //     path: 'home',
-    //     component: App
-    //     },
-    {
-        path: 'nurse_find',
-        component: NurseFind
-    },
+  {
+      path: 'nurse_find',
+      component: NurseFind
+  },
 ];
